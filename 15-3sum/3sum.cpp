@@ -51,8 +51,8 @@ public:
                     ans.push_back(temp);//already sorted so dont need to sort like other 2 solutions
                     j++;
                     k--;
-                    while(j<k && nums[j] == nums[j-1]) j++;
-                    while(j<k && nums[k] == nums[k+1]) k--;
+                    while(j<k && nums[j] == nums[j-1]) j++;//this is because if there are 2 elements(j-1,j so to maintain this error) 
+                    while(j<k && nums[k] == nums[k+1]) k--;//this is because if there are 2 elements(j-1,j so to maintain this error) 
                 }
             }
         }
