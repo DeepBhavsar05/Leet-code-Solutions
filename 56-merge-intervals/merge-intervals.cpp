@@ -27,7 +27,7 @@ public:
         for(int i=0;i<n;i++){
             int start = intervals[i][0];
             int end = intervals[i][1];
-            if(ans.empty()|| intervals[i][0] > ans.back()[1]) ans.push_back({start,end});// || intervals[i][0] > ans.back()[1] if I have only one element in my ans and the condition fulfilled so it will created new vector in ans 
+            if(ans.empty()) ans.push_back({start,end});// || intervals[i][0] > ans.back()[1] if I have only one element in my ans and the condition fulfilled so it will created new vector in ans 
             else if(!ans.empty() && start <= ans.back()[1]){
                 ans.back()[1] = max(end,ans.back()[1]);
             }
