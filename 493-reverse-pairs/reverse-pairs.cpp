@@ -30,7 +30,7 @@ public:
         int right = mid+1;
         int cnt =0;
         for(int i=low;i<=mid;i++){
-            while(right<=high && (long long)nums[i] > 2LL*nums[right]) right++;
+            while(right<=high && nums[i] > 2*(long long)nums[right]) right++;
             cnt +=(right-(mid+1));
         }
         return cnt;
