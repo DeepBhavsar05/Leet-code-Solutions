@@ -8,7 +8,10 @@ public:
 
         while(low<=high){
             int mid = (low+high)/2;
-
+            if(nums[low]<= nums[high]){
+                mini = min(mini,nums[low]);
+                break;//do not need to check further for next halves
+            }
             if(nums[low]<=nums[mid]){
                 //left-half is sorted
                 mini = min(mini,nums[low]);
