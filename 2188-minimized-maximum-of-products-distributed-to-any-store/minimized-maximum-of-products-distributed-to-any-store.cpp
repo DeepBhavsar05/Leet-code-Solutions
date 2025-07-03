@@ -3,7 +3,7 @@ public:
     bool totalQuantity(int mid,vector<int>& quantities,int shop){
         int totalShop = 0;
         for(int i=0;i<quantities.size();i++){
-            totalShop = totalShop + ceil(double(quantities[i])/double(mid));
+            totalShop = totalShop + (quantities[i] + mid - 1)/mid;//ceil(double(quantities[i])/double(mid));
         }
         if(totalShop<=shop) return true;
         else return false;
